@@ -1,0 +1,4 @@
+fake_useragent == 0.1.11
+gevent == 21.1.2
+grequests == 0.6.0
+requests == 2.27.1
