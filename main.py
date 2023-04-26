@@ -69,14 +69,15 @@ def main():
     # cookies = data[0]
     # cookie = {i.split("=")[0]:i.split("=")[-1] for i in cookies.split("; ")}
     while True:
-        ua = UserAgent()  
-        user_agent = ua.random
+        # ua = UserAgent()  
+        # user_agent = ua.random
 
         headers = {
-                    'user-agent': user_agent,
-                    'referer': 'https://www.pixiv.net',
+                    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0',
+                    'referer': 'https://www.pixiv.net/users',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Accept-Language': 'zh-TW,zh;q=0.8,en-US;q=0.5,en;q=0.3',
                     "cookie": cookiee
-
                 }
         images = requests.get("https://www.pixiv.net/ajax/user/"+str(userid)+"/illusts/bookmarks?tag=&offset="+str(now)+"&limit=48&rest=show&lang=zh_tw",headers=headers,cookies=cookie)
         #images = requests.get("http://www.pixiv.net/ajax/user/33573448/illusts/bookmarks?tag=&offset=0&limit=48&rest=show&lang=zh_tw",headers=headers,cookies=cookie)
