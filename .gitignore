@@ -1,3 +1,4 @@
 set.json
 images
 test.py
+*__pycache__
